@@ -3,7 +3,9 @@ var Backbone = require('backbone');
 
 var Post = Backbone.Model.extend({
   defaults:{
-
+    name : "name",
+    type : "type",
+    ingredient: "cheese"
   }
 });
 
