@@ -12,13 +12,13 @@ $('.loading-btn').on('click', function(){
   posts.fetch().done(function(data){
     console.log(data);
     $('.loading-btn').text("Submit");
-    _.each(data, function(item){
+    _.each(data, function(item, index){
       $('.pizza-place').append(pizzaTemplate(item));
       $('#'+item._id).on('click', function(){
         console.log(item._id);
-        var nukeId = item._id;
+        console.log(posts.models[index]);
         console.log(posts);
-        posts.remove([{ _id : "" + nukeId }] );
+        // posts.models[index].nukeSelf();
         console.log(posts);
       });
     });

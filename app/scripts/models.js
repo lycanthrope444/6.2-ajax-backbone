@@ -6,6 +6,10 @@ var Post = Backbone.Model.extend({
     name : "name",
     type : "type",
     ingredient: "cheese"
+  },
+  nukeSelf : function(){
+    this.remove();
+    console.log("i died");
   }
 });
 
